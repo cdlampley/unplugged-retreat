@@ -94,6 +94,9 @@ header, footer {
   align-items: center;
   flex-flow: row wrap;
 }
+header {
+  padding: 15px 0;
+}
 header .content-wrapper {
   display: flex;
 }
@@ -101,25 +104,47 @@ header nav {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
+  width: 60%;
 }
 header nav ul {
   display: flex;
+  width: 20%;
+  padding: 15px 0;
+}
+.header-divider {
+  width: 44%;
 }
 footer .content-wrapper {
   flex-flow: row wrap;
+  width: 55%;
+  margin: 50px 0;
 }
 footer .social-icons {
   display: flex;
 }
-footer social p {
+footer .social p {
   display: flex;
 }
+footer .contact {
+  margin-bottom: 50px;
+}
+
 /* Homepage */
 .hero-area {
+  display: flex;
   flex-flow: flex;
 }
-.hero-area {
-  display: flex;
+.hero-area h3 {
+  margin: 60px 0;
+}
+.hero-image {
+  padding: 15px 0;
+}
+.form-description {
+  margin: 40px 0;
+}
+.form {
+  margin: 50px 0;
 }
 aside {
   display: flex;
@@ -131,9 +156,33 @@ aside {
 .features-items {
   flex-flow: row wrap;
 }
+.features article {
+  width: 54%;
+}
+.features .content-wrapper h2 {
+  margin: 50px 0;
+}
+.features .content-wrapper article {
+  margin: 70px 0;
+}
+.font-awesome-icon {
+  margin-bottom: 40px;
+}
 .reviews {
   display: flex;
   flex-flow: row wrap;
+}
+.reviews .content-wrapper {
+  margin: 50px 0;
+}
+.reviews h3 {
+  width: 80%;
+}
+.group-image {
+  margin: 25px 0;
+}
+.reviews .content-wrapper article h4 {
+  margin-bottom: 25px;
 }
 
 /* About Page */
