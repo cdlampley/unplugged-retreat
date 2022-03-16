@@ -99,6 +99,7 @@ header {
 }
 header .content-wrapper {
   display: flex;
+  flex-direction: column;
 }
 header nav {
   display: flex;
@@ -114,8 +115,10 @@ header nav ul {
 .header-divider {
   width: 44%;
 }
+footer {
+  flex-direction: column;
+}
 footer .content-wrapper {
-  flex-flow: row wrap;
   width: 55%;
   margin: 50px 0;
 }
@@ -127,6 +130,9 @@ footer .social p {
 }
 footer .contact {
   margin: 0 0 50px 0;
+}
+footer .copyright {
+  margin: 20px 0;
 }
 
 /* Homepage */
@@ -163,7 +169,7 @@ aside {
 .features article {
   width: 54%;
 }
-.features .features-item {
+.features .features-items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,6 +347,9 @@ aside {
     header nav ul {
       justify-content: space-between;
     }
+    header nav ul li {
+      justify-content: space-between;
+    }
     .header-divider {
       display: none;
     }
@@ -366,7 +375,7 @@ aside {
       flex-flow: column wrap;
       flex-basis: 50%;
     }
-    .features .features-item {
+    .features .features-item-description {
       width: 50%;
     }
 
@@ -430,10 +439,119 @@ aside {
     .footer .copyright {
       width: 100%;
     }
-
+  }
 @media only screen and (min-width: 1200px) {
     /*Desktop styles here */
+    .container-wrapper {
+      max-width: 960px;
+      margin: 100px 0;
+    }
+
+    /*Header*/
+    header {
+      justify-content: center;
+      padding: 40px 0;
+    }
+    header .content-wrapper {
+      justify-content: center;
+      width: 100%;
+    }
+    header nav {
+      width: 12%;
+    }
+    header nav ul {
+      justify-content: space-between;
+    }
+    .header-divider {
+      display: none;
+    }
+
+    /*Main*/
+    aside .content-wrapper {
+      margin: 45px 0;
+      display: flex;
+      justify-content: center;
+      flex-flow: nowrap;
+    }
+    aside .content-wrapper .form-description,
+    aside .content-wrapper .form {               
+        margin: 0;
+        width: 67%;
+    }
+
+     /*Features*/
+     .features article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      flex-basis: 33%;
+    }
+    .features .features-item-description {
+      width: 75%;
+      text-align: center;
+    }
     
+    /*Reviews*/
+    .reviews article {
+      display: flex;
+      justify-content: center;
+    }
+    .reviews article div {
+      width: 33%;
+    }
+
+    /*FAQ*/
+    .faq {
+      flex-basis: auto;
+    }
+    .faq .content-wrapper {
+      justify-content: space-between;
+    }
+    .faq-content {
+      flex-basis: 36%;
+    }
+    .faq h2 {
+      width: 100%;
+    }
+
+    /*About*/
+    .mission-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  .mission-content p {
+      width: 80%;
+    }
+
+  .contact-section .content-wrapper h3 {
+      width: 30%;
+    }
+
+  .contact-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /*Footer*/
+    footer .content-wrapper {
+      margin: 100px 0;
+      width: 70%;
+    }
+    footer .contact {
+      margin-bottom: 0;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer .copyright {
+      width: 100%;
+    }
 }
 
 /* ==========================================================================
@@ -510,4 +628,3 @@ aside {
     page-break-after: avoid;
   }
 }
-
