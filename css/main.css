@@ -91,6 +91,7 @@ textarea {
  
 html {
 	font-size: 16px;
+  color: #e2e3ed;
 }
  
 body {
@@ -153,6 +154,7 @@ header, footer {
 }
 header {
   padding: 15px 0;
+  background: #202322;
 }
 header .content-wrapper {
   display: flex;
@@ -174,10 +176,14 @@ header nav ul {
 }
 footer {
   flex-direction: column;
+  background: #202322;
 }
 footer .content-wrapper {
   width: 55%;
   margin: 50px 0;
+}
+footer .address {
+  font-style: normal;
 }
 footer .social-icons {
   display: flex;
@@ -215,7 +221,36 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background: #527158;
 }
+
+/*Form*/
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* Features */
 
 .features {
@@ -247,6 +282,7 @@ aside {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  background: #2a423a;
 }
 .reviews .content-wrapper {
   margin: 50px 0;
