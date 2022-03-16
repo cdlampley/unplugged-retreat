@@ -223,6 +223,9 @@ aside {
   flex-flow: row wrap;
   background: #527158;
 }
+img {
+  width: 100%;
+}
 
 /*Form*/
 aside .form {
