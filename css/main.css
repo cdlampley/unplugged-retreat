@@ -129,7 +129,10 @@ p {
 }
  
 img {
- 
+  width: 100%;
+}
+figure {
+  margin: 0;
 }
  
 figure {
@@ -160,20 +163,34 @@ header .content-wrapper {
   display: flex;
   flex-direction: column;
 }
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 header nav {
   display: flex;
-  justify-content: space-around;
   flex-flow: row wrap;
+  justify-content: center;
   width: 60%;
 }
 header nav ul {
   display: flex;
   width: 20%;
   padding: 15px 0;
+  justify-content: center;
+}
+header nav ul li {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
 }
 .header-divider {
   width: 44%;
 }
+
 footer {
   flex-direction: column;
   background: #202322;
@@ -203,9 +220,12 @@ footer .copyright {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: url('../img/hero-image.jpg') center no-repeat #333;
+  background-size: cover;
 }
 .hero-area h2 {
   margin: 60px 0;
+  font-family: 'Open Sans', sans-serif;
 }
 .hero-image {
   padding: 15px 0;
@@ -222,9 +242,6 @@ aside {
   align-items: center;
   flex-flow: row wrap;
   background: #527158;
-}
-img {
-  width: 100%;
 }
 
 /*Form*/
@@ -260,6 +277,8 @@ input[type=button] {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: url('../img/features-image.jpg') center no-repeat #333;
+  background-size: cover;
 }
 .features article {
   width: 54%;
@@ -270,6 +289,7 @@ input[type=button] {
   align-items: center;
   flex-flow: row wrap;
 }
+
 .features .content-wrapper h2 {
   margin: 50px 0;
 }
@@ -299,7 +319,13 @@ input[type=button] {
 .reviews .content-wrapper article h4 {
   margin: 0 0 25px 0;
 }
-
+.reviews .content-wrapper article figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 /* About Page */
 .mission {
   display: flex;
@@ -431,11 +457,12 @@ input[type=button] {
     /*Header*/
     header {
       justify-content: center;
-      padding: 33px 0;
+    }
+    header figure {
+      width: 28%;
     }
     header .content-wrapper {
-      justify-content: center;
-      width: 100%;
+      justify-content: space-between;
     }
     header nav {
       width: 20%;
@@ -451,6 +478,9 @@ input[type=button] {
     }
 
     /*Main*/
+    .hero-area h2 {
+      font-size: 1.125em;
+    }
     aside .content-wrapper {
       margin: 50px 0;
       display: flex;
