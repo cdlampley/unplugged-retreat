@@ -284,7 +284,6 @@ input[type=button] {
   align-items: center;
   flex-flow: row wrap;
 }
-
 .features .content-wrapper h2 {
   margin: 50px 0;
 }
@@ -321,6 +320,7 @@ input[type=button] {
   align-items: center;
   flex-flow: row wrap;
 }
+
 /* About Page */
 .mission {
   display: flex;
@@ -339,19 +339,20 @@ input[type=button] {
 .contact p {
   margin: 0;
 }
-.map figure {
-  width: 100%;
-  height: 0;
-  padding-bottom: 125%;
-  overflow: hidden;
-  position: relative;
-}
-.map iframe {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+
+/* Map */
+.embed-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; overflow: 
+  hidden; max-width: 100%; 
+} 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
 }
 
 /* FAQ */
@@ -543,10 +544,14 @@ input[type=button] {
     .mission-content {
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
       align-items: center;
     }
-
-  .mission-content p {
+    .mission-info {
+      display: flex;
+      justify-content: space-between;
+    }
+  .mission-info p {
       width: 40%;
     }
 
