@@ -113,7 +113,6 @@ a {
 h2 {
  font-family: 'Poppins', sans-serif;
  font-size: 1.875em;
- line-height: 2;
  font-weight: 500;
 }
  
@@ -146,7 +145,6 @@ address {
   margin: 50px 0;
 }
 
-
 /* Base Header */
 header, footer {
   display: flex;
@@ -159,8 +157,8 @@ header {
   padding: 15px 0;
 }
 header .content-wrapper {
-  display: flex;
   margin: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
@@ -172,29 +170,34 @@ header figure {
   align-items: center;
   flex-flow: row wrap;
 }
-header nav {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  width: 60%;
-  font-size: 1.125em;
-  font-weight: 700;
-  text-transform: uppercase;
-  align-items: center;
-}
-header nav ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-header nav ul li {
-  font-size: 1.125em;
-}
 .header-divider {
   background: #3a3a3a; 
   height: 1px;
   width: 100%;
   margin: 10px 0 20px 0;
+}
+
+/* Nav */
+header nav {
+  display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+  justify-content: space-around;
+	margin: 0;
+  flex-direction: row;
+  text-transform: uppercase;
+  width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+}
+header nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+header nav ul li {
+  font-size: 1.125em;
 }
 
 /* Base Footer */
@@ -210,7 +213,7 @@ footer .content-wrapper {
   margin: 50px 0;
 }
 footer .contact {
-  margin: 0 0 50px 0;
+  margin: 0 0 30px 0;
 } 
 footer .social {
   display: flex;
@@ -245,23 +248,20 @@ footer .copyright {
 
 /* Hero Section */
 .hero-area {
+  background: url('../img/hero-image.jpg') center no-repeat #333;
+  background-size: cover;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background: url('../img/hero-image.jpg') center no-repeat #333;
-  background-size: cover;
-  background-position: center;
-  min-height: 500px;
 }
 .hero-area h2 {
   font-size: 2.25em;
   line-height: 1.2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
-.hero-image {
-  padding: 15px 0;
-}
+
 /* Aside Section */
 aside {
   display: flex;
@@ -269,6 +269,12 @@ aside {
   align-items: center;
   flex-flow: row wrap;
   background: #527158;
+}
+aside h4 {
+  font-size: 1.125em;
+}
+aside .content-wrapper {
+  margin: 25px 0 75px;
 }
 aside .form {
   margin-top: 30px;
@@ -305,6 +311,7 @@ input[type=button] {
 }
 .features h2 {
   margin-bottom: 60px;
+  line-height: 1.5em;
 }
 .features article {
   width: 60%;
@@ -320,7 +327,6 @@ input[type=button] {
   font-size: 3.75em;
   margin-bottom: 40px;
 }
-
 .features p {
   text-align: center;
   margin: 0;
@@ -350,11 +356,11 @@ input[type=button] {
 .group-image {
   margin: 25px 0;
 }
-.reviews .content-wrapper article h4 {
+.reviews article h4 {
   margin: 0 0 25px 0;
 }
-.reviews .content-wrapper article figure {
-  width: 60%;
+.reviews article figure {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -534,7 +540,7 @@ input[type=button] {
       padding: 33px 0;
     }
     header figure {
-      width: 28%;
+      width: 30%;
     }
     header .content-wrapper {
       justify-content: space-between;
@@ -562,7 +568,7 @@ input[type=button] {
     aside .content-wrapper {
       margin: 50px 0;
       display: flex;
-      justify-content: space;
+      justify-content: space-between;
       flex-flow: row wrap;
     }
     aside .content-wrapper .form-description,
@@ -594,9 +600,6 @@ input[type=button] {
       display: flex;
       justify-content: space-between;
     }
-    .reviews article div {
-      width: 50%;
-    }
     .reviews article figure,
     .reviews article div {
       width: 49%;
@@ -619,7 +622,7 @@ input[type=button] {
     .faq h2 {
       width: 100%;
     }
-    faq h4,
+    .faq h4,
     .faq p {
       font-size: .875em;
       line-height: 1.125;
@@ -632,20 +635,12 @@ input[type=button] {
       align-items: center;
       padding-top: 20px;
     }
-    .mission-info {
-      display: flex;
-      justify-content: space-between;
+  .mission-content p {
+      width: 45%;
     }
-  .mission-info p {
-      width: 40%;
+  .contact-section h3 {
+      font-size: 1.5em;
     }
-    .map figure {
-      padding-bottom: 45.5%;
-    }
-  .contact-section .content-wrapper h3 {
-      width: 80%;
-    }
-
   .contact-content {
       display: flex;
       justify-content: space-between;
@@ -687,22 +682,21 @@ input[type=button] {
 
 @media only screen and (min-width: 1200px) {
     /*Desktop styles here */
-    .container-wrapper {
+    .content-wrapper {
       max-width: 960px;
       margin: 100px 0;
+    }
+    p {
+      font-size: 1.125em;
+      line-height: 1.333;
     }
 
     /*Header*/
     header {
-      justify-content: center;
-      padding: 40px 0;
+      padding: 15px 0;
     }
     header .content-wrapper {
-      justify-content: center;
       width: 100%;
-    }
-    header nav {
-      width: 12%;
     }
     header nav ul {
       justify-content: space-between;
@@ -725,6 +719,9 @@ input[type=button] {
     aside .content-wrapper .form-description,
     aside .content-wrapper .form {               
         width: 30%;
+    }
+    .form-description h3 {
+      font-size: 1.875em;
     }
     .form-description p {
       font-size: 1.125em;
@@ -758,21 +755,23 @@ input[type=button] {
     }
 
     /*About*/
-    .map figure {
-      padding-bottom: 40%;
-    }
-    .mission h3,
-    .contact-section .content-wrapper h3 {
+    .mission h2,
+    .contact-section .content-wrapper h2 {
       width: 95%;
       font-size: 3em;
+  }
+  .contact-content h3 {
+    font-size: 1.875em;
   }
     .contact-content h4 {
       font-size: 1.875em;
     }
-
     /*Footer*/
     footer h4 {
       font-size: 1.875em;
+    }
+    footer p {
+      font-size: 1.125em;
     }
 }
 
