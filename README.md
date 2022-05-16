@@ -1,4 +1,4 @@
-Unplugged Retreat Multi-page Website
+# Unplugged Retreat Multi-page Website
 
 A 3-page responsive website using iframes, icon fonts, and forms. Created with a boilerplate and converted from a PSD to responsive design using Flexbox. Used Git to add to Github and created a Github page.
 
